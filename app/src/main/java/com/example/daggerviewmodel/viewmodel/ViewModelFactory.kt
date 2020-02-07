@@ -1,4 +1,4 @@
-package viewmodel
+package com.example.daggerviewmodel.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -11,8 +11,8 @@ import javax.inject.Provider
 import kotlin.reflect.KClass
 
 class ViewModelFactory @Inject constructor(
-    private val viewModelsMap: Map<Class<out ViewModel>, @JvmSuppressWildcards Provider<ViewModel>>)
-    : ViewModelProvider.Factory {
+    private val viewModelsMap: Map<Class<out ViewModel>, @JvmSuppressWildcards Provider<ViewModel>>
+) : ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         var viewModelCreator: Provider<out ViewModel>? = viewModelsMap[modelClass]
 

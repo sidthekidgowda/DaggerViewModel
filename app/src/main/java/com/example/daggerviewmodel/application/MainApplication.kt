@@ -1,8 +1,8 @@
-package application
+package com.example.daggerviewmodel.application
 
 import androidx.multidex.MultiDexApplication
-import di.AppComponent
-import di.DaggerAppComponent
+import com.example.daggerviewmodel.di.AppComponent
+import com.example.daggerviewmodel.di.DaggerAppComponent
 
 class MainApplication : MultiDexApplication() {
 

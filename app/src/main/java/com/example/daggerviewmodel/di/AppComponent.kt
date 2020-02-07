@@ -1,10 +1,13 @@
-package di
+package com.example.daggerviewmodel.di
 
 import android.app.Application
-import com.example.daggerviewmodel.MainActivity
+import com.example.daggerviewmodel.view.IncrementDecrementFragment
+import com.example.daggerviewmodel.view.MainActivity
 import dagger.BindsInstance
 import dagger.Component
+import javax.inject.Singleton
 
+@Singleton
 @Component(modules = [ViewModelModule::class])
 interface AppComponent {
 
@@ -13,5 +16,5 @@ interface AppComponent {
         fun create(@BindsInstance app: Application): AppComponent
     }
 
-    fun inject(activity: MainActivity)
+    fun inject(fragment: IncrementDecrementFragment)
 }
