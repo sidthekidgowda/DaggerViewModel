@@ -28,7 +28,7 @@
             android:id="@+id/count_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{String.valueOf(viewModel.integerCountLiveData())}"
+            android:text="@{String.valueOf(viewModel.integerCount)}"
             android:textSize="20sp"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintBottom_toBottomOf="parent"

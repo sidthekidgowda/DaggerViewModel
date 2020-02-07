@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.daggerviewmodel.R
 import com.example.daggerviewmodel.databinding.IncrementDecrementFragmentBinding
 import com.example.daggerviewmodel.viewmodel.IncrementDecrementViewModel
+import kotlinx.android.synthetic.main.increment_decrement_fragment.*
 import javax.inject.Inject
 
 class IncrementDecrementFragment : Fragment() {
@@ -26,6 +27,7 @@ class IncrementDecrementFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.increment_decrement_fragment, container, false)
+        binding.lifecycleOwner = this
         return binding.root
     }
 
